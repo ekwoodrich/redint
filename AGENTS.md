@@ -1,6 +1,8 @@
 # Agent notes
 
 - This is a dependency-free Manifest V3 Chrome/Edge extension. Load the `extension/` directory unpacked; there is no build output.
+- `artwork/bot-artwork.png` is the original supplied icon. `extension/icons/` contains 16, 32, 48, and 128 px PNG derivatives; the 16 px manifest icon is used by Chromium's context menu.
+- Regenerate the icon sizes with `ffmpeg -i artwork/bot-artwork.png -vf scale=SIZE:SIZE:flags=lanczos -frames:v 1 -pix_fmt rgba extension/icons/icon-SIZE.png` for each listed size. Preserve the source artwork and alpha channel.
 - Run `npm test` and `npm run lint` after edits. Browser verification should cover both the context menu and hidden-profile button.
 - `profile.js` is loaded by both the service worker and the content script. Keep URL validation and Rosint URL construction centralized there.
 - The content script intentionally runs only on Reddit. The context menu can appear on Reddit profile links on any website.

@@ -2,6 +2,8 @@
 
 Redint is a small Chrome and Edge extension that opens Reddit profiles in [Rosint](https://rosint.dev/). Rosint searches independent archives; coverage varies, and it does not bypass Reddit access controls.
 
+Its extension and context menu icons use the supplied orange artwork in `artwork/bot-artwork.png`.
+
 ## Features
 
 - Right-click a Reddit profile link on any website and choose **Search Reddit profile on Rosint**.
