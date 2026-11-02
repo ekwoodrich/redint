@@ -1,0 +1,14 @@
+{
+  "name": "redint",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reddit-to-Rosint Chrome extension",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "test:browser": "node test/browser-cdp.mjs",
+    "lint": "node --check extension/profile.js && node --check extension/background.js && node --check extension/content.js && node --check test/browser-cdp.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

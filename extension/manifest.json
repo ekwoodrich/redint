@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Redint",
+  "version": "1.0.0",
+  "description": "Open Reddit profiles in Rosint from a link or a hidden profile page.",
+  "permissions": ["contextMenus"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.reddit.com/*"],
+      "js": ["profile.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

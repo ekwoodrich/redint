@@ -1,0 +1,24 @@
+.redint-button {
+  box-sizing: border-box;
+  display: table;
+  margin: 12px auto 0;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: #ff4500;
+  color: #fff !important;
+  font: 600 14px/1.3 Arial, sans-serif;
+  text-align: center;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.redint-button:hover,
+.redint-button:focus-visible {
+  background: #d93b00;
+  color: #fff !important;
+}
+
+.redint-button:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 2px;
+}
