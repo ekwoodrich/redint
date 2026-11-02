@@ -6,7 +6,7 @@ Its extension and context menu icons use the supplied orange artwork in `artwork
 
 ## Features
 
-- Right-click a Reddit profile link on any website and choose **Search Reddit profile on Rosint**.
+- Right-click a Reddit profile link on Reddit and choose **u/USERNAME on Rosint**. On other websites, the item uses **Search Reddit profile on Rosint**.
 - On a Reddit profile page that says the user's posts are hidden, use the **Search u/… on Rosint** button below the notice.
 
 Both actions open `https://rosint.dev/?u=USERNAME` in a new tab. Redint does not fetch profile data or transmit browsing activity itself. Rosint handles the search after you choose to open it.
@@ -30,7 +30,7 @@ npm run lint
 
 `extension/profile.js` validates Reddit profile URLs and builds Rosint links. `background.js` owns the context menu. `content.js` adds the button when it finds a hidden-posts notice on a profile page.
 
-For a browser check, start Chrome or Edge with a debugging port and load the unpacked extension, then run `REDINT_CDP=http://127.0.0.1:9222 npm run test:browser`. This checks button placement, a real mouse click, the opened Rosint tab, ordinary profiles, and a client-side profile route change. The test serves fixed page fixtures at Reddit profile URLs so it works even when Reddit challenges automation. Check the native context menu in a visible browser by right-clicking a Reddit profile link and selecting **Search Reddit profile on Rosint**.
+For a browser check, start Chrome or Edge with a debugging port and load the unpacked extension, then run `REDINT_CDP=http://127.0.0.1:9222 npm run test:browser`. This checks button placement, a real mouse click, the opened Rosint tab, ordinary profiles, and a client-side profile route change. The test serves fixed page fixtures at Reddit profile URLs so it works even when Reddit challenges automation. Check the native context menu in a visible browser by right-clicking a Reddit profile link and selecting **u/USERNAME on Rosint**.
 
 ## Limits
 

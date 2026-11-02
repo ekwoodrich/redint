@@ -45,7 +45,15 @@
     timer = setTimeout(updateButton, 100);
   }
 
+  function updateContextMenu(event) {
+    const link = event.target instanceof Element ? event.target.closest('a[href]') : null;
+    chrome.runtime.sendMessage({ type: 'redint-link-target', url: link?.href || '' }).catch(() => {});
+  }
+
   updateButton();
   new MutationObserver(scheduleUpdate).observe(document.documentElement, { childList: true, subtree: true, characterData: true });
   window.addEventListener('popstate', scheduleUpdate);
+  document.addEventListener('pointerover', updateContextMenu, true);
+  document.addEventListener('focusin', updateContextMenu, true);
+  document.addEventListener('contextmenu', updateContextMenu, true);
 })();

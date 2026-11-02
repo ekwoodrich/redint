@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Redint",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Open Reddit profiles in Rosint from a link or a hidden profile page.",
   "icons": {
     "16": "icons/icon-16.png",
